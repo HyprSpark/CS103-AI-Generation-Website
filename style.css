@@ -1,0 +1,47 @@
+
+/* This is a simple CSS sheet for readabilty, the complete sheet will be provided by Fagan*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #F7F2E8;
+    color: #38352F;
+}
+
+header {
+    padding: 20px;
+    background-color: #DCCDB8;
+}
+
+nav a {
+    margin-right: 15px;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #EFE5D5;
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #465747;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    padding: 20px;
+    background-color: #DCCDB8;
+    text-align: left;
+}
