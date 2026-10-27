@@ -20,7 +20,7 @@ header {
 }
 
 header h1 {
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 nav[aria-label="Main navigation"] {
@@ -52,11 +52,19 @@ main {
     padding: 20px;
 }
 
+.page-article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 section {
+    clear: both;
     margin-bottom: 30px;
     padding: 20px;
     background-color: #EFE5D5;
     border-radius: 8px;
+    overflow: auto;
 }
 
 h1, h2, h3 {
@@ -79,12 +87,13 @@ img {
 
 .topic-figure {
     float: right;
-    max-width: 175px;
+    max-width: 200px;
     margin: 0 0 20px 20px;
     text-align: right;
 }
 
 nav.page-contents {
+    overflow: hidden;
     background-color: #EFE5D5;
     border: 1px solid #DCCDB8;
     padding: 15px 20px;
@@ -95,6 +104,43 @@ nav.page-contents {
 nav.page-contents h2 {
     font-size: 1.1rem;
     margin-top: 0;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+nav.page-contents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+nav.page-contents li {
+    width: 100%;
+    max-width: 320px;
+}
+
+nav.page-contents a {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    color: #38352F;
+    background-color: #DCCDB8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav.page-contents a:hover {
+    background-color: #465747;
+    color: #F7F2E8;
 }
 
 .citation {
@@ -157,5 +203,3 @@ a:focus-visible {
         padding: 15px;
     }
 }
-
-
