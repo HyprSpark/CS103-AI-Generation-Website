@@ -143,6 +143,29 @@ nav.page-contents a:hover {
     color: #F7F2E8;
 }
 
+/* Back to top button */
+a[href="#top"] {
+    display: inline-block;
+    color: #38352F;
+    background-color: #DCCDB8;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin: 10px 0 20px 0;
+}
+
+a[href="#top"]::before {
+    content: "↑ ";
+}
+
+a[href="#top"]:hover {
+    background-color: #465747;
+    color: #F7F2E8;
+}
+
 .citation {
     background-color: #DCCDB8;
     color: #38352F;
