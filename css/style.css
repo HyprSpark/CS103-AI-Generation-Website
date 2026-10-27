@@ -1,5 +1,6 @@
-
-/* This is a simple CSS sheet for readabilty, the complete sheet will be provided by Fagan*/
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -12,10 +13,37 @@ body {
 header {
     padding: 20px;
     background-color: #DCCDB8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
-    margin-right: 15px;
+header h1 {
+    margin: 0;
+}
+
+nav[aria-label="Main navigation"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav[aria-label="Main navigation"] a {
+    color: #38352F;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+nav[aria-label="Main navigation"] a:hover {
+    background-color: #CBBAB0;
+}
+
+nav[aria-label="Main navigation"] a[aria-current="page"] {
+    background-color: #465747;
+    color: #F7F2E8;
 }
 
 main {
@@ -40,8 +68,94 @@ img {
     height: auto;
 }
 
+.byline, figcaption {
+    color: #605C54;
+    font-size: 0.9rem;
+}
+
+.byline {
+    font-style: italic;
+}
+
+.topic-figure {
+    float: right;
+    max-width: 175px;
+    margin: 0 0 20px 20px;
+    text-align: right;
+}
+
+nav.page-contents {
+    background-color: #EFE5D5;
+    border: 1px solid #DCCDB8;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+nav.page-contents h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+.citation {
+    background-color: #DCCDB8;
+    color: #38352F;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.citation:hover {
+    background-color: #465747;
+    color: #F7F2E8;
+}
+
+blockquote {
+    margin: 20px 0;
+    padding: 10px 15px;
+    background-color: #F7F2E8;
+    border-left: 4px solid #465747;
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
+
 footer {
+    margin-top: 40px;
     padding: 20px;
     background-color: #DCCDB8;
-    text-align: left;
 }
+
+footer a {
+    color: #465747;
+    font-weight: bold;
+}
+
+a:focus-visible {
+    outline: 2px solid #465747;
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    .topic-figure {
+        float: none;
+        margin: 20px auto;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+
